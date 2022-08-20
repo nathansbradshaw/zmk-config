@@ -67,6 +67,25 @@
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 
+
+				adjust_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |       |      |     |      |      |      |                   |      |       |       |      |       |       |
+// |   `   | HOME | UP  |  END |PG_UP |  PSCRN   |                   |  6   |   7   |   8   |  9   |   0   |       |
+// | LCTRL | LEFT |DOWN |RIGHT |PG_DN |  DEL  |                   |      |   <-  |   v   |  ^   |  ->   |       |
+// | LSHFT |  F8  |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
+//                     |       |       |      |        |  |       |      |       |       |
+			bindings = <
+&trans    &trans   &trans   &trans    &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
+&kp GRAVE &kp HOME &kp UP   &kp END   &kp PG_UP  &kp PSCRN                 &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
+&kp LCTRL &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN  &kp DEL                   &trans      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
+&kp LSHFT &kp F8   &kp F9   &kp F10   &kp F11 &kp F12   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
+                        &trans  &trans  &mo 3    &trans   &trans    &trans      &trans    &trans
+			>;
+
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+		};
+
 	// 	adjust_layer {
      
 	 
