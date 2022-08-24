@@ -10,6 +10,9 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+	ext-power {
+                init-delay-ms = <50>;
+        };
 	keymap {
 		compatible = "zmk,keymap";
 
