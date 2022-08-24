@@ -11,7 +11,7 @@
 
 / {
 	ext-power {
-                init-delay-ms = <50>;
+                init-delay-ms = <90>;
         };
 	keymap {
 		compatible = "zmk,keymap";
